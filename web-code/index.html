@@ -78,7 +78,7 @@
         
        <div class="row">
                 <div class="col-4">	
-                    <img src="img/images/photo_1.jpg" class="img-responsive photo_">
+                    <img src="img/images/photo_1.jpg" class="img-responsive photo_1">
                 </div>
                 <div class="col-4">
                     <p style="text-align: center;" id="center"></p>	
@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-4">
                     <img src="img/images/photo_3%20.jpg" class="img-responsive photo_3">
-                </div>
+                </div>1
             </div>
 		
 		
@@ -100,7 +100,7 @@
 	
 	<div class="container">
 	
-	 <div id="bacon"></div>
+	 <p id="bacon"></p>
 		
 		
 	
@@ -115,19 +115,12 @@
 	      
 	
 </div> 
-	
-	
-   
-        <script>
-            $('#img_container').slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-            });
-        </script>
-		
-		<script>
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+	<script>
            $(document).ready(function()  {
                $.getJSON('https://baconipsum.com/api/?callback=?',
                          { 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'3' },
@@ -143,14 +136,15 @@
                });
            });
        </script>
-		  
-		
-		<script src="https://baconipsum.com/api/?callback=?" type="text/javascript"></script>
-	
-	
-		
-		
-		
+   
+        <script>
+            $('#img_container').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+            });
+        </script>
 		
 		
 		
