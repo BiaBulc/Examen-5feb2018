@@ -97,9 +97,13 @@
 		
 		
         </div>
-    
-  
-		  
+	
+	<div class="container">
+	
+	 <div id="bacon"></div>
+		
+		
+	
 		  
 <div class="container-fluid">
 	  
@@ -113,8 +117,7 @@
 </div> 
 	
 	
-       
-
+   
         <script>
             $('#img_container').slick({
                 slidesToShow: 2,
@@ -123,10 +126,37 @@
                 autoplaySpeed: 1000,
             });
         </script>
+		
+		<script>
+           $(document).ready(function()  {
+               $.getJSON('https://baconipsum.com/api/?callback=?',
+                         { 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'3' },
+                         function(baconGoodness)
+                         {
+                   if (baconGoodness && baconGoodness.length > 0)
+                   {
+                       $("#bacon").html('');
+                       for (var i = 0; i < baconGoodness.length; i++)
+                           $("#bacon").append('<p>' + baconGoodness[i] + '</p>');
+                       $("#bacon").show();
+                   }
+               });
+           });
+       </script>
+		  
+		
+		<script src="https://baconipsum.com/api/?callback=?" type="text/javascript"></script>
 	
 	
+		
+		
+		
+		
+		
+		
+		
     </div>
-    
+	</div>
 	</body>
     
    
